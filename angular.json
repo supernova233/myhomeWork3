@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "myHomeWork3"
+    }
+  },
+  "defaultProject": "myHomeWork3",
+  "cli": {
+    "analytics": false
+  }
 }
