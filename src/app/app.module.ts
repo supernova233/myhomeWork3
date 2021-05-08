@@ -10,6 +10,8 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { SideNavbarComponent } from './side-navbar/side-navbar.component';
 import { AdminCtrlPanelComponent } from './admin-ctrl-panel/admin-ctrl-panel.component';
 import { PageNotfundComponent } from './page-notfund/page-notfund.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -20,11 +22,13 @@ import { PageNotfundComponent } from './page-notfund/page-notfund.component';
     ProductDetailComponent,
     SideNavbarComponent,
     AdminCtrlPanelComponent,
-    PageNotfundComponent
+    PageNotfundComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
