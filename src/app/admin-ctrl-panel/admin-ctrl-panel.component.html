@@ -1,13 +1,15 @@
-<div>
-    <app-navbar></app-navbar>
-</div>
-<div class="row">
-    <div class="col-lg-3">
-        <app-side-navbar></app-side-navbar>
-    </div>
-    <div class="col-lg-9">
-        <div class="container-fluid">
-            <router-outlet></router-outlet>
+<app-navbar></app-navbar>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-2 no-padding">
+            <app-side-navbar></app-side-navbar>
+        </div>
+        <div class="col-lg-10 no-padding">
+            <div class="container">
+                <router-outlet></router-outlet>
+            </div>
         </div>
     </div>
+
 </div>

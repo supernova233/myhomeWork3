@@ -7,9 +7,9 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { ProductComponent } from './product/product.component';
 
 const routes: Routes = [
-  {path: '', redirectTo:"/admin",pathMatch:"full"},
+  {path: '', redirectTo:"admin",pathMatch:"full"},
   {path: 'admin', component:AdminCtrlPanelComponent,children:[
-    {path:'',redirectTo:"/admin/dashboard",pathMatch:"full"},
+    {path:'',redirectTo:"dashboard",pathMatch:"full"},
     {path:'dashboard',component:DashboardComponent},
     {path:'product',component:ProductComponent},
     {path:'product-detail',component:ProductDetailComponent},
