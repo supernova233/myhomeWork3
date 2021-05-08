@@ -3,11 +3,15 @@
         <input type="text" class="form-control" placeholder="Search . . .">
     </div>
     <ul class="sidebar">
-        <li class="sidebar-item "><a class="sidebar-link active" href="#">ssssss</a></li>
-        <li class="sidebar-item"><a class="sidebar-link" href="#">ssssss</a></li>
-        <li class="sidebar-item"><a class="sidebar-link" href="#">ssssss</a></li>
-        <li class="sidebar-item"><a class="sidebar-link" href="#">ssssss</a></li>
-        <li class="sidebar-item"><a class="sidebar-link" href="#">ssssss</a></li>
-        <li class="sidebar-item"><a class="sidebar-link" href="#">ssssss</a></li>
+        <li class="sidebar-item ">
+            <a class="sidebar-link" [routerLink]="['/admin/dashboard']" routerLinkActive="active"><i class="fas fa-tachometer-alt"></i>Dashboard<span></span></a>
+        </li>
+        <li class="sidebar-item" *ngFor="let item of sidebarItems">
+            <a class="sidebar-link" [routerLinkActive]="['active']" data-bs-toggle="collapse" [attr.href]="'#'+item.id" role="button" aria-expanded="false" [attr.aria-controls] = "item.id"><span [innerHtml]="item.name"></span> <i class="fas fa-chevron-left"></i></a>
+            <ul class="collapse sidebar-subMenu" [attr.id]="item.id">
+                <li *ngFor="let sMenu of item.subMenu"><a routerLinkActive="active" [routerLink]="sMenu.link" ><i class="far fa-dot-circle"></i>&nbsp;{{sMenu.name}}</a></li>
+            </ul>
+        </li>
+        
     </ul>
 </div>
